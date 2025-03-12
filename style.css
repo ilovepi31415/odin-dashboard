@@ -20,6 +20,7 @@ body {
 .header {
     grid-area: h;
     background-color: green;
+    min-height: 200px;
 }
 
 .nav {
@@ -32,9 +33,13 @@ body {
     background-color: orange;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: "p s";
+    grid-template-areas: "m s";
     padding: 16px;
     gap: 16px;
+}
+
+.main {
+    grid-area: m;
 }
 
 .card {
@@ -43,9 +48,8 @@ body {
 }
 
 .projects {
-    grid-area: p;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 16px;
 }
 
@@ -53,8 +57,7 @@ body {
     background-color: white;
     text-align: center;
     border: 4px solid black;
-    min-height: 200px;
-    height: auto;
+    height: 300px;
 }
 
 .sidebar {
