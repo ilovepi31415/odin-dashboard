@@ -28,6 +28,23 @@ body {
     background-color: aqua;
 }
 
+.nav-title {
+    background-color: yellow;
+    height: 100px;
+}
+
+.nav-sections, .nav-settings {
+    margin-top: 64px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(6, 75px);
+    gap: 12px;
+}
+
+.nav .item {
+    background-color: yellow;
+}
+
 .content {
     grid-area: c;
     background-color: orange;
