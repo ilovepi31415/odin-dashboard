@@ -26,6 +26,7 @@ body {
 .nav {
     grid-area: n;
     background-color: aqua;
+    min-width: 200px;
 }
 
 .nav-title {
@@ -83,25 +84,32 @@ body {
 
 .announcements {
     display: grid;
-    gap: 16px;
+    gap: 0;
     margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 3px 3px 3px #bbb;
 }
 
 .announcements .card {
-    background-color: blueviolet;
     text-align: center;
-    border: 4px solid black;
     height: 100px;
+}
+
+.announcements .card:not(:first-child) {
+    border-top: 2px solid #bbb;
 }
 
 .trending {
     display: grid;
-    gap: 16px;
+    gap: 0;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 3px 3px 3px #bbb;
 }
 
 .trending .card {
-    background-color: pink;
     text-align: center;
-    border: 4px solid black;
     height: 100px;
 }
