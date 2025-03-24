@@ -1,3 +1,5 @@
+/* Palette: https://coolors.co/466362-8896ab-c5d5e4-5fad41-b26700 */
+
 * {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -105,7 +107,7 @@ body {
 
 .buttons button {
     color: white;
-    background-color: limegreen;
+    background-color: #5FAD41;
     padding: 8px;
     border-radius: 24px;
     height: 48px;
@@ -116,7 +118,7 @@ body {
 
 .nav {
     grid-area: n;
-    background-color: limegreen;
+    background-color: #5FAD41;
     min-width: 200px;
 }
 
@@ -143,7 +145,7 @@ body {
     color: white;
 }
 
-.icon {
+.nav .icon {
     height: 50px;
     width: 50px;
     border: 1px solid white;
@@ -151,7 +153,7 @@ body {
 
 .content {
     grid-area: c;
-    background-color: orange;
+    background-color: lightgray;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: "m s";
@@ -163,7 +165,14 @@ body {
     grid-area: m;
 }
 
-.card {
+.main .card {
+    display: grid;
+    align-content: center;
+    background: linear-gradient(90deg, #B26700, #B26700 25px, #fff 10px);
+    border-radius: 16px;
+}
+
+.sidebar .card {
     display: grid;
     align-content: center;
 }
