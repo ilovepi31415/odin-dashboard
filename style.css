@@ -165,16 +165,57 @@ body {
     grid-area: m;
 }
 
+.content .heading {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
 .main .card {
-    display: grid;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: start;
     background: linear-gradient(90deg, #B26700, #B26700 25px, #fff 10px);
     border-radius: 16px;
+    padding: 32px 32px 32px 48px;
+}
+
+.card .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.card .description {
+    font-size: 20px;
+    text-align: start;
+    flex-grow: 1;
+    color: gray;
+}
+
+.card .extras {
+    display: flex;
+    gap: 24px;
+    align-self: end;
+}
+
+.extras .icon {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
 }
 
 .sidebar .card {
     display: grid;
     align-content: center;
+}
+
+.sidebar .card .title {
+    font-size: 16px;
+}
+
+.sidebar .card .description {
+    font-size: 14px;
 }
 
 .projects {
@@ -186,7 +227,7 @@ body {
 .projects .card {
     background-color: white;
     text-align: center;
-    border: 4px solid black;
+    box-shadow: 3px 3px 3px #bbb;
     height: 300px;
 }
 
@@ -199,7 +240,7 @@ body {
     display: grid;
     gap: 0;
     margin-bottom: 16px;
-    padding: 16px;
+    padding: 16px 24px;
     border-radius: 12px;
     background-color: white;
     box-shadow: 3px 3px 3px #bbb;
@@ -220,9 +261,34 @@ body {
     border-radius: 12px;
     background-color: white;
     box-shadow: 3px 3px 3px #bbb;
+    padding: 16px;
 }
 
 .trending .card {
+    display: grid;
+    grid-template: 1fr 1fr / 100px 1fr;
+    grid-template-areas:
+    "i t"
+    "i d";
     text-align: center;
     height: 100px;
+}
+
+.trending .icon {
+    grid-area: i;
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+    margin: 8px;
+}
+
+.trending .title {
+    grid-area: t;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.trending .description {
+    grid-area: d;
 }
