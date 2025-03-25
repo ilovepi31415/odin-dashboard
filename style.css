@@ -40,6 +40,11 @@ body {
     gap: 16px;
 }
 
+#search-icon, #notifications {
+    height: 30px;
+    width: 30px;
+}
+
 .header #search-bar {
     flex-grow: 1;
     border: none;
@@ -113,6 +118,7 @@ body {
     height: 48px;
     border: none;
     flex-grow: 1;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -145,10 +151,18 @@ body {
     color: white;
 }
 
-.nav .icon {
+.nav .nav-title .icon {
     height: 50px;
     width: 50px;
-    border: 1px solid white;
+}
+
+.nav .icon {
+    height: 40px;
+    width: 40px;
+}
+
+.nav .icon img {
+    filter: invert(100%);
 }
 
 .content {
@@ -200,9 +214,8 @@ body {
 }
 
 .extras .icon {
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
+    height: 40px;
+    width: 40px;
 }
 
 .sidebar .card {
