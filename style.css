@@ -13,7 +13,7 @@ body {
 
 .container {
     display: grid;
-    grid-template: 1fr 6fr / 1fr 4fr;
+    grid-template: 1fr 6fr / 350px 4fr;
     grid-template-areas:
         "n h"
         "n c";
@@ -62,6 +62,15 @@ body {
     gap: 5%;
 }
 
+.image img {
+    border-radius: 100%;
+}
+
+#profile-picture-small img {
+    height: 50px;
+    width: 50px;
+}
+
 .header .username {
     font-size: 24px;
     font-weight: bold;
@@ -78,9 +87,13 @@ body {
 
 .header .greeting #profile-picture-large {
     grid-area: image;
-    width: 150px;
+    width: 100px;
+    height: 100px;
+}
+
+#profile-picture-large img {
+    width: 100%;
     height: 100%;
-    border: 1px solid black;
 }
 
 .greeting .greeting-text, .greeting #name {
@@ -125,7 +138,6 @@ body {
 .nav {
     grid-area: n;
     background-color: #5FAD41;
-    min-width: 200px;
 }
 
 .nav-title {
@@ -223,11 +235,11 @@ body {
     align-content: center;
 }
 
-.sidebar .card .title {
+.sidebar .title {
     font-size: 16px;
 }
 
-.sidebar .card .description {
+.sidebar .description {
     font-size: 14px;
 }
 
@@ -287,12 +299,16 @@ body {
     height: 100px;
 }
 
-.trending .icon {
+.trending .image {
     grid-area: i;
     height: auto;
     width: auto;
-    border: 1px solid black;
     margin: 8px;
+}
+
+.trending .image img {
+    height: 100%;
+    width: 100%;
 }
 
 .trending .title {
@@ -300,8 +316,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    font-size: 24px;
 }
 
 .trending .description {
     grid-area: d;
+    font-size: 16px;
 }
